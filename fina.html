@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Summary</title>
+  <link rel="stylesheet" href="fina.css">
+  <style>
+    /* Styling the "Go to Main Page" button */
+    .go-to-main-page {
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 20px;
+      display: block;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Hover effect for the button */
+    .go-to-main-page:hover {
+      background-color: #45a049; /* Darker green when hovered */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pamoja Dokita® 2025 - Blood Donation Summary</h1>
+
+  <!-- Summary Filters -->
+  <div id="summaryContent">
+    <h3>Blood Donation Summary</h3>
+    <label for="summaryTypeSelect">Select Summary Period:</label>
+    <select id="summaryTypeSelect">
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+      <option value="quarterly">Quarterly</option>
+      <option value="yearly">Yearly</option>
+    </select>
+  </div>
+
+  <!-- Blood Summary Table -->
+  <div id="summaryContent">
+    <table id="bloodSummaryTable">
+      <thead>
+        <tr>
+          <th>Blood Type</th>
+          <th>Total Units Donated</th>
+          <th>Price Type</th>
+          <th>Approval Dates</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be dynamically inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Print Section -->
+  <div class="print-section" id="printSection" style="display: none;">
+    <button class="print-button" id="printSummaryButton">Print Summary</button>
+  </div>
+
+  <!-- Go to Main Page Button -->
+  <a href="karibu.html">
+    <button class="go-to-main-page">Go to Main Page</button>
+  </a>
+
+  <script src="fina.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Requests Management</title>
+  <link rel="stylesheet" href="demo.css">
+  <!-- Link Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <i class="fas fa-tint"></i> Blood Requests Management
+    </h1>
+  </header>
+
+  <main>
+    <!-- Approved Requests Section -->
+    <section>
+      <h2>
+        <i class="fas fa-check-circle"></i> Approved Blood Requests
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th><i class="fas fa-user"></i> Recipient</th>
+            <th><i class="fas fa-tint"></i> Blood Type</th>
+            <th><i class="fas fa-vial"></i> Units</th>
+            <th><i class="fas fa-exclamation-circle"></i> Urgency</th>
+            <th><i class="fas fa-cogs"></i> Actions</th>
+          </tr>
+        </thead>
+        <tbody id="approvedRequestsList">
+          <!-- Approved requests will be dynamically populated here -->
+        </tbody>
+      </table>
+
+      <!-- Pagination controls -->
+      <div class="pagination">
+        <button id="prevPage" class="pagination-btn">
+          <i class="fas fa-arrow-left"></i> Previous
+        </button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage" class="pagination-btn">
+          Next <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Cleared Requests Section -->
+    <section>
+      <h2>
+        <i class="fas fa-check-double"></i> Cleared Blood Requests
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th><i class="fas fa-user"></i> Recipient</th>
+            <th><i class="fas fa-tint"></i> Blood Type</th>
+            <th><i class="fas fa-vial"></i> Units</th>
+            <th><i class="fas fa-exclamation-circle"></i> Urgency</th>
+            <th><i class="fas fa-cogs"></i> Actions</th>
+          </tr>
+        </thead>
+        <tbody id="clearedRequestsList">
+          <!-- Cleared requests will be dynamically populated here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Link external JavaScript -->
+  <script src="approvedRequests.js" defer></script>
+</body>
+</html>

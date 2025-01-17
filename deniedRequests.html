@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test.css">
+  <title>Denied Requests</title>
+</head>
+<body>
+  <header>
+    <h2>Denied Blood Requests</h2>
+  </header>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Recipient</th>
+          <th>Blood Type</th>
+          <th>Units</th>
+          <th>Urgency</th>
+          <th>Denial Reasons</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="deniedRequestsList">
+        <!-- Rows will be dynamically populated -->
+      </tbody>
+    </table>
+  </main>
+  <script src="deniedRequests.js" defer></script>
+</body>
+</html>

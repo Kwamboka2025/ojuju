@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamoja Dokita® 2025 Blood Bank Inventory</title>
+    <link rel="stylesheet" href="lab.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-tint"></i> Pamoja Dokita® 2025 Blood Bank Inventory</h1>
+        
+        <form id="bloodForm">
+            <!-- Donor Information -->
+            <fieldset>
+                <legend><i class="fas fa-user"></i> Donor Information</legend>
+                <label for="donorID"><i class="fas fa-id-card"></i> Donor ID/Code:</label>
+                <input type="text" id="donorID" placeholder="Enter donor ID" required>
+
+                <label for="donationDate"><i class="fas fa-calendar-alt"></i> Donation Date:</label>
+                <input type="date" id="donationDate" required>
+
+                <label>Donation Type:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="donationType" value="Whole Blood" required> Whole Blood</label>
+                    <label><input type="radio" name="donationType" value="Platelets"> Platelets</label>
+                    <label><input type="radio" name="donationType" value="Plasma"> Plasma</label>
+                </div>
+            </fieldset>
+
+            <!-- Blood Component Details -->
+            <fieldset>
+                <legend><i class="fas fa-flask"></i> Blood Component Details</legend>
+                <label for="componentType"><i class="fas fa-vials"></i> Component Type:</label>
+                <select id="componentType" required>
+                    <option value="Red Blood Cells">Red Blood Cells</option>
+                    <option value="Plasma">Plasma</option>
+                    <option value="Platelets">Platelets</option>
+                </select>
+
+                <label for="unitNumber"><i class="fas fa-barcode"></i> Unit Number:</label>
+                <input type="text" id="unitNumber" placeholder="Auto-generated" readonly>
+
+                <label for="bloodGroup"><i class="fas fa-tint"></i> Blood Group:</label>
+                <select id="bloodGroup" required>
+                    <option value="">Select blood group...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label>Rh Factor:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="rhFactor" value="Positive" required> Positive</label>
+                    <label><input type="radio" name="rhFactor" value="Negative"> Negative</label>
+                </div>
+
+                <label for="volume"><i class="fas fa-balance-scale"></i> Volume Collected (mL):</label>
+                <input type="number" id="volume" placeholder="Enter volume" required>
+            </fieldset>
+
+            <!-- Testing Results -->
+            <fieldset>
+                <legend><i class="fas fa-virus"></i> Testing Results</legend>
+                <label>HIV:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="hiv" value="Negative" required> Negative</label>
+                    <label><input type="radio" name="hiv" value="Positive"> Positive</label>
+                </div>
+
+                <label>Hepatitis B (HBsAg):</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="hepatitisB" value="Negative" required> Negative</label>
+                    <label><input type="radio" name="hepatitisB" value="Positive"> Positive</label>
+                </div>
+
+                <label>Hepatitis C (HCV):</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="hepatitisC" value="Negative" required> Negative</label>
+                    <label><input type="radio" name="hepatitisC" value="Positive"> Positive</label>
+                </div>
+
+                <label>Syphilis (TPHA):</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="syphilis" value="Negative" required> Negative</label>
+                    <label><input type="radio" name="syphilis" value="Positive"> Positive</label>
+                </div>
+
+                <label for="otherTests">Other Tests (Specify):</label>
+                <input type="text" id="otherTests">
+            </fieldset>
+
+            <!-- Processing Details -->
+            <fieldset>
+                <legend><i class="fas fa-cogs"></i> Processing Details</legend>
+                <label for="plasmaFrozenDate"><i class="fas fa-calendar-check"></i> Plasma Frozen Date:</label>
+                <input type="date" id="plasmaFrozenDate">
+
+                <label for="rbcProcessingDate"><i class="fas fa-calendar-check"></i> RBC Processing Date:</label>
+                <input type="date" id="rbcProcessingDate">
+
+                <label for="storageTemperature"><i class="fas fa-thermometer-half"></i> Storage Temperature (°C):</label>
+                <input type="number" id="storageTemperature">
+
+                <label for="expirationDate"><i class="fas fa-calendar-times"></i> Expiration Date:</label>
+                <input type="date" id="expirationDate">
+            </fieldset>
+
+            <!-- Inventory and Release Information -->
+            <fieldset>
+                <legend><i class="fas fa-box"></i> Inventory and Release Information</legend>
+                <label for="storageLocation"><i class="fas fa-map-marker-alt"></i> Storage Location:</label>
+                <input type="text" id="storageLocation" required>
+
+                <label for="releaseDate"><i class="fas fa-calendar-check"></i> Release Date:</label>
+                <input type="date" id="releaseDate">
+
+                <label for="recipientID"><i class="fas fa-hospital"></i> Recipient/Facility ID:</label>
+                <input type="text" id="recipientID">
+
+                <label for="compatibilityCheckBy"><i class="fas fa-user-check"></i> Compatibility Check Performed By:</label>
+                <input type="text" id="compatibilityCheckBy">
+            </fieldset>
+
+            <!-- Quality Assurance -->
+            <fieldset>
+                <legend><i class="fas fa-check-circle"></i> Quality Assurance</legend>
+                <label for="inspectedBy"><i class="fas fa-user-shield"></i> Inspected By:</label>
+                <input type="text" id="inspectedBy">
+
+                <label for="remarks"><i class="fas fa-comments"></i> Remarks:</label>
+                <textarea id="remarks"></textarea>
+
+                <label for="authorizedBy"><i class="fas fa-user-lock"></i> Authorized By:</label>
+                <input type="text" id="authorizedBy">
+            </fieldset>
+
+            <button type="submit"><i class="fas fa-save"></i> Save to Local Storage</button>
+        </form>
+    </div>
+
+  
+  
+
+  
+    <script src="retrieve.js"></script>
+
+    <script src="lab.js" defer></script>
+    <script src="legi.js" defer></script>
+</body>
+</html>

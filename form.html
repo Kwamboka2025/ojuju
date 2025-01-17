@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita&reg; Blood Bank Donor Questionnaire</title>
+  <!-- Future CSS and Icon libraries can be linked here -->
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-tint"></i> Pamoja Dokita&reg; Blood Bank Donor Questionnaire</h1>
+  </header>
+
+
+  <main>
+    <form id="donorForm">
+    <!-- Section I: Demographic Information -->
+    <section id="demographic-information">
+      <h2><i class="fas fa-user"></i> I. Demographic Information</h2>
+      <!-- Form fields for demographic information will go here -->
+      
+   
+  <!-- 1. Last Name -->
+  <label for="lastName">
+    <i class="fas fa-user"></i> Last Name of Donor:
+  </label><br>
+  <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required><br><br>
+
+  <!-- 2. First Name -->
+  <label for="firstName">
+    <i class="fas fa-user"></i> First Name of Donor:
+  </label><br>
+  <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required><br><br>
+
+  <!-- 3. Telephone Number -->
+  <label for="phone">
+    <i class="fas fa-phone"></i> Telephone Number of Donor:
+  </label><br>
+  <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br><br>
+
+  <!-- 4. Date of Birth -->
+  <label for="dob">
+    <i class="fas fa-calendar-alt"></i> Date of Birth:
+  </label><br>
+  <input type="date" id="dob" name="dob" required><br><br>
+
+  <!-- 5. Age -->
+  <label for="age">
+    <i class="fas fa-hourglass-half"></i> Age of Donor:
+  </label><br>
+  <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter age" required><br><br>
+
+  <!-- 6. Residence/Quartier -->
+  <label for="residence">
+    <i class="fas fa-home"></i> Residence/Quartier:
+  </label><br>
+  <input type="text" id="residence" name="residence" placeholder="Enter residence" required><br><br>
+
+  <!-- 7. Type of Donor -->
+  <label for="donorType">
+    <i class="fas fa-users"></i> Type of Donor:
+  </label><br>
+  <select id="donorType" name="donorType" required>
+    <option value="">-- Select Type of Donor --</option>
+    <option value="volunteer">Volunteer</option>
+    <option value="replacement">Replacement</option>
+  </select><br><br>
+  
+
+</section>
+
+    </section>
+
+    <!-- Section II: Medical History -->
+    <section id="medical-history">
+      <h2><i class="fas fa-notes-medical"></i> II. Medical History</h2>
+      <!-- Form fields for medical history will go here -->
+      
+
+  <!-- 1. Significant Medical Problems -->
+  <label for="medicalProblems">
+    1. <i class="fas fa-exclamation-circle"></i> Do you have any significant medical problems?
+  </label><br>
+  <input type="radio" id="medicalProblemsYes" name="medicalProblems" value="Yes" required>
+  <label for="medicalProblemsYes">Yes</label>
+  <input type="radio" id="medicalProblemsNo" name="medicalProblems" value="No" required>
+  <label for="medicalProblemsNo">No</label><br>
+  <textarea id="medicalProblemsDetails" name="medicalProblemsDetails" rows="3" placeholder="If yes, please state the medical problems"></textarea><br><br>
+
+  <!-- 2. Female Pregnancy -->
+  <label for="pregnancy">
+    2. <i class="fas fa-venus"></i> If Donor is a Female: Is it possible you could be pregnant?
+  </label><br>
+  <input type="radio" id="pregnancyYes" name="pregnancy" value="Yes" required>
+  <label for="pregnancyYes">Yes</label>
+  <input type="radio" id="pregnancyNo" name="pregnancy" value="No" required>
+  <label for="pregnancyNo">No</label><br><br>
+
+  <!-- 3. Cancer Treatment -->
+  <label for="cancerTreatment">
+    3. <i class="fas fa-ribbon"></i> Have you ever been treated for Cancer?
+  </label><br>
+  <input type="radio" id="cancerTreatmentYes" name="cancerTreatment" value="Yes" required>
+  <label for="cancerTreatmentYes">Yes</label>
+  <input type="radio" id="cancerTreatmentNo" name="cancerTreatment" value="No" required>
+  <label for="cancerTreatmentNo">No</label><br><br>
+
+  <!-- 4. Known Allergies -->
+  <label for="allergies">
+    4. <i class="fas fa-allergies"></i> Do you have any known allergies?
+  </label><br>
+  <input type="radio" id="allergiesYes" name="allergies" value="Yes" required>
+  <label for="allergiesYes">Yes</label>
+  <input type="radio" id="allergiesNo" name="allergies" value="No" required>
+  <label for="allergiesNo">No</label><br>
+  <textarea id="allergiesDetails" name="allergiesDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+
+  <!-- 5. Chronic Medical Conditions -->
+  <label for="chronicConditions">
+    5. <i class="fas fa-heartbeat"></i> Do you have any chronic medical conditions (e.g., diabetes, hypertension, heart disease)?
+  </label><br>
+  <input type="radio" id="chronicConditionsYes" name="chronicConditions" value="Yes" required>
+  <label for="chronicConditionsYes">Yes</label>
+  <input type="radio" id="chronicConditionsNo" name="chronicConditions" value="No" required>
+  <label for="chronicConditionsNo">No</label><br>
+  <textarea id="chronicConditionsDetails" name="chronicConditionsDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+
+  <!-- 6. Recent Surgeries -->
+  <label for="recentSurgeries">
+    6. <i class="fas fa-procedures"></i> Have you had any recent surgeries or medical procedures?
+  </label><br>
+  <input type="radio" id="recentSurgeriesYes" name="recentSurgeries" value="Yes" required>
+  <label for="recentSurgeriesYes">Yes</label>
+  <input type="radio" id="recentSurgeriesNo" name="recentSurgeries" value="No" required>
+  <label for="recentSurgeriesNo">No</label><br>
+  <textarea id="recentSurgeriesDetails" name="recentSurgeriesDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+
+  <!-- 7. Blood Disorders -->
+  <label for="bloodDisorders">
+    7. <i class="fas fa-dna"></i> Have you ever been diagnosed with a blood disorder or bleeding disorder?
+  </label><br>
+  <input type="radio" id="bloodDisordersYes" name="bloodDisorders" value="Yes" required>
+  <label for="bloodDisordersYes">Yes</label>
+  <input type="radio" id="bloodDisordersNo" name="bloodDisorders" value="No" required>
+  <label for="bloodDisordersNo">No</label><br>
+  <textarea id="bloodDisordersDetails" name="bloodDisordersDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+
+  <!-- 8. Current Medications -->
+  <label for="currentMedications">
+    8. <i class="fas fa-pills"></i> Are you currently taking any medications?
+  </label><br>
+  <input type="radio" id="currentMedicationsYes" name="currentMedications" value="Yes" required>
+  <label for="currentMedicationsYes">Yes</label>
+  <input type="radio" id="currentMedicationsNo" name="currentMedications" value="No" required>
+  <label for="currentMedicationsNo">No</label><br>
+  <textarea id="currentMedicationsDetails" name="currentMedicationsDetails" rows="3" placeholder="If yes, please list the medications"></textarea><br><br>
+  <!-- 10. Organ Transplant -->
+<label for="organTransplant">
+  9. <i class="fas fa-heartbeat"></i> Have you ever had an organ transplant?
+</label><br>
+<input type="radio" id="organTransplantYes" name="organTransplant" value="Yes" required>
+<label for="organTransplantYes">Yes</label>
+<input type="radio" id="organTransplantNo" name="organTransplant" value="No" required>
+<label for="organTransplantNo">No</label><br><br>
+
+<!-- 11. Pregnant or Breastfeeding -->
+<label for="pregnantBreastfeeding">
+  10. <i class="fas fa-baby"></i> Are you pregnant or breastfeeding?
+</label><br>
+<input type="radio" id="pregnantBreastfeedingYes" name="pregnantBreastfeeding" value="Yes" required>
+<label for="pregnantBreastfeedingYes">Yes</label>
+<input type="radio" id="pregnantBreastfeedingNo" name="pregnantBreastfeeding" value="No" required>
+<label for="pregnantBreastfeedingNo">No</label><br><br>
+
+
+  <!-- 9. Recent Vaccinations -->
+  <label for="recentVaccinations">
+  11. <i class="fas fa-syringe"></i> Have you had any recent vaccinations (e.g., flu, COVID-19)?
+  </label><br>
+  <input type="radio" id="recentVaccinationsYes" name="recentVaccinations" value="Yes" required>
+  <label for="recentVaccinationsYes">Yes</label>
+  <input type="radio" id="recentVaccinationsNo" name="recentVaccinations" value="No" required>
+  <label for="recentVaccinationsNo">No</label><br>
+  <textarea id="recentVaccinationsDetails" name="recentVaccinationsDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+</section>
+
+    </section>
+
+    <!-- Section III: Lifestyle Risks -->
+    <section id="lifestyle-risks">
+      <h2><i class="fas fa-heartbeat"></i> III. Lifestyle Risks</h2>
+      <!-- Form fields for lifestyle risks will go here -->
+      
+  <!-- 1. HIV, Hepatitis, or STIs Diagnosis -->
+  <label for="hivHepatitis">
+    12. <i class="fas fa-virus"></i> Have you ever been diagnosed with or treated for HIV, Hepatitis B or C, or other sexually transmitted infections (STIs)?
+  </label><br>
+  <input type="radio" id="hivHepatitisYes" name="hivHepatitis" value="Yes" required>
+  <label for="hivHepatitisYes">Yes</label>
+  <input type="radio" id="hivHepatitisNo" name="hivHepatitis" value="No" required>
+  <label for="hivHepatitisNo">No</label><br>
+  <textarea id="hivHepatitisDetails" name="hivHepatitisDetails" rows="3" placeholder="If yes, please specify"></textarea><br><br>
+
+  <!-- 2. Sexual Contact with High-Risk Individuals -->
+  <label for="sexualContact">
+    13. <i class="fas fa-hand-holding-heart"></i> In the past 12 months, have you had sexual contact with someone who has HIV or hepatitis?
+  </label><br>
+  <input type="radio" id="sexualContactYes" name="sexualContact" value="Yes" required>
+  <label for="sexualContactYes">Yes</label>
+  <input type="radio" id="sexualContactNo" name="sexualContact" value="No" required>
+  <label for="sexualContactNo">No</label><br><br>
+
+  <!-- 3. Use of Illicit Drugs -->
+  <label for="illicitDrugs">
+    14. <i class="fas fa-syringe"></i> Have you used any illicit drugs in the past 12 months?
+  </label><br>
+  <input type="radio" id="illicitDrugsYes" name="illicitDrugs" value="Yes" required>
+  <label for="illicitDrugsYes">Yes</label>
+  <input type="radio" id="illicitDrugsNo" name="illicitDrugs" value="No" required>
+  <label for="illicitDrugsNo">No</label><br><br>
+
+  <!-- 4. Contact with Contagious Disease -->
+  <label for="contagiousContact">
+    15. <i class="fas fa-users-slash"></i> Have you had any contact with a person diagnosed with a contagious disease in the last 14 days?
+  </label><br>
+  <input type="radio" id="contagiousContactYes" name="contagiousContact" value="Yes" required>
+  <label for="contagiousContactYes">Yes</label>
+  <input type="radio" id="contagiousContactNo" name="contagiousContact" value="No" required>
+  <label for="contagiousContactNo">No</label><br><br>
+</section>
+
+    </section>
+
+    <!-- Section IV: Donation History -->
+    <section id="donation-history">
+      <h2><i class="fas fa-history"></i> IV. Donation History</h2>
+      <!-- Form fields for donation history will go here -->
+      
+     
+
+  <!-- 1. Previous Blood Donations -->
+  <label for="previousDonation">
+    16. <i class="fas fa-gift"></i> Have you ever donated blood before?
+  </label><br>
+  <input type="radio" id="previousDonationYes" name="previousDonation" value="Yes" required>
+  <label for="previousDonationYes">Yes</label>
+  <input type="radio" id="previousDonationNo" name="previousDonation" value="No" required>
+  <label for="previousDonationNo">No</label><br><br>
+  
+  <label for="lastDonationDate" id="lastDonationDateLabel" style="display:none;">
+    If yes, when was your last donation?
+  </label><br>
+  <input type="date" id="lastDonationDate" name="lastDonationDate" style="display:none;"><br><br>
+
+  <!-- 2. Reactions to Previous Donations -->
+  <label for="donationReactions">
+    17. <i class="fas fa-heartbeat"></i> Have you ever experienced any reactions to previous blood donations (e.g., fainting, dizziness, allergic reactions)?
+  </label><br>
+  <input type="radio" id="donationReactionsYes" name="donationReactions" value="Yes" required>
+  <label for="donationReactionsYes">Yes</label>
+  <input type="radio" id="donationReactionsNo" name="donationReactions" value="No" required>
+  <label for="donationReactionsNo">No</label><br><br>
+  <textarea id="donationReactionsDetails" name="donationReactionsDetails" rows="3" placeholder="If yes, please specify" style="display:none;"></textarea><br><br>
+
+  <!-- 3. Current Health Status -->
+  <label for="currentHealthStatus">
+    18. <i class="fas fa-stethoscope"></i> Are you currently unfeeling well and unhealthy?
+  </label><br>
+  <input type="radio" id="currentHealthStatusYes" name="currentHealthStatus" value="Yes" required>
+  <label for="currentHealthStatusYes">Yes</label>
+  <input type="radio" id="currentHealthStatusNo" name="currentHealthStatus" value="No" required>
+  <label for="currentHealthStatusNo">No</label><br><br>
+</section>
+
+    </section>
+
+    <!-- Section V: Consent for Blood Donation -->
+    <section id="consent">
+      <h2><i class="fas fa-hand-holding-heart"></i> V. Consent for Blood Donation</h2>
+      <!-- Consent form fields will go here -->
+   
+  <!-- 1. Voluntary Donation -->
+  <label for="voluntaryDonation">
+    19. <i class="fas fa-thumbs-up"></i> I understand that I am donating blood voluntarily, and I give my consent to donate.
+  </label><br>
+  <input type="radio" id="voluntaryDonationYes" name="voluntaryDonation" value="Yes" required>
+  <label for="voluntaryDonationYes">Yes</label>
+  <input type="radio" id="voluntaryDonationNo" name="voluntaryDonation" value="No" required>
+  <label for="voluntaryDonationNo">No</label><br><br>
+
+  <!-- 2. Accuracy of Information -->
+  <label for="accuracyConfirmation">
+    20. <i class="fas fa-info-circle"></i> I confirm that all the information provided above is accurate to the best of my knowledge.
+  </label><br>
+  <input type="radio" id="accuracyConfirmationYes" name="accuracyConfirmation" value="Yes" required>
+  <label for="accuracyConfirmationYes">Yes</label>
+  <input type="radio" id="accuracyConfirmationNo" name="accuracyConfirmation" value="No" required>
+  <label for="accuracyConfirmationNo">No</label><br><br>
+</section>
+<section id="signature">
+  <h2><i class="fas fa-signature"></i> Signature of Donor</h2>
+
+  <!-- Signature of Donor -->
+  <label for="signatureInput">
+    Signature of Donor:
+  </label><br>
+  <input type="text" id="signatureInput" name="signatureInput" placeholder="Enter your signature" required><br><br>
+
+  <!-- Date of Donation -->
+  <label for="dateInput">
+    Date:
+  </label><br>
+  <input type="date" id="dateInput" name="dateInput" required><br><br>
+</section>
+
+    </section>
+
+    <button type="submit">Submit</button>
+    </form>
+  </main>
+<button id="themeButton" onclick="toggleTheme()">Back to Main Page</button>
+
+
+
+<style>
+    /* Initial White Theme */
+    #themeButton {
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #themeButton.white:hover {
+        background-color: #333;
+        color: white;
+    }
+
+    /* TED Theme */
+    #themeButton.red {
+        background-color: #E30613; /* TED red */
+        color: white;
+    }
+
+    #themeButton.red:hover {
+        background-color: #A10200; /* Darker red on hover */
+    }
+</style>
+
+<script>
+    // Toggle the theme between white and red
+    function toggleTheme() {
+        const button = document.getElementById('themeButton');
+        // Change the theme and redirect to main page
+        button.classList.toggle('red');
+        button.classList.toggle('white');
+        window.location.href = 'karibu.html'; // Redirect to main page
+    }
+</script>
+  
+<button class="back-to-top" id="backToTopBtn">
+  ↑
+</button>
+
+
+<script>
+    // Get the button
+    let mybutton = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 100px from the top of the document, show the button
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.classList.add("show");
+      } else {
+        mybutton.classList.remove("show");
+      }
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+  </script>
+  
+  
+  
+  <footer>
+    <p>Pamoja Dokita&reg; &copy; 2024</p>
+  </footer>
+
+  <!-- Future JavaScript files can be linked here -->
+   <script src="dem.js"></script> <!-- Link to your JS file -->
+
+  <script src="forms.js" defer></script>
+</body>
+</html>
+

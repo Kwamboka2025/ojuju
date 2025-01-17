@@ -1,0 +1,60 @@
+/* Basic styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: red;
+}
+
+section {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: red;
+  color: white;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+.pagination-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  background-color: #ccc;
+}

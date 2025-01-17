@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamoja Dokita® Blood Donation Events</title>
+    <link rel="stylesheet" href="date.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #ffcccb;">
+
+    <div class="header">
+        <div class="logo">
+            <img src="pamoja-dokita-logo.png" alt="Pamoja Dokita® Logo" class="logo-img">
+        </div>
+        <h1>Pamoja Dokita® - Your Partner in Blood Donation</h1>
+        <p class="intro-text">Join us in our mission to save lives by participating in our blood donation events. Together, we can make a difference.</p>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="Connect with us on LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://youtube.com" target="_blank" class="social-icon" aria-label="Follow us on YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="social-icon" aria-label="Follow us on TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="mailto:info@pamoja-dokita.com" class="social-icon" aria-label="Contact us via email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Event Form Section -->
+        <section class="calendar-section">
+            <h2>Organize Your Blood Donation Event</h2>
+            <form id="add-event-form">
+                <label for="event-name">Event Title:</label>
+                <input type="text" id="event-name" name="event-name" required>
+
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event-date" required>
+
+                <label for="event-time">Event Time:</label>
+                <input type="time" id="event-time" name="event-time" required>
+
+                <label for="event-location">Event Location:</label>
+                <input type="text" id="event-location" name="event-location" required>
+
+                <label for="event-description">Event Description:</label>
+                <textarea id="event-description" name="event-description" rows="4" placeholder="Describe the event here..." required></textarea>
+
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event-type" required>
+                    <option value="In-Person">In-Person Event</option>
+                    <option value="Online">Online Event (Webinar)</option>
+                </select>
+
+                <label for="event-slots">Slots Available:</label>
+                <input type="number" id="event-slots" name="event-slots" required>
+
+                <!-- Pricing Options -->
+                <label for="entry-fee">Entry Fee:</label>
+                <select id="entry-fee" name="entry-fee" required>
+                    <option value="Free">Free Entry</option>
+                    <option value="50">Ksh 50 Entry Fee</option>
+                    <option value="100">Ksh 100 Entry Fee</option>
+                    <option value="150">Ksh 150 Entry Fee</option>
+                    <option value="200">Ksh 200 Entry Fee</option>
+                    <option value="300">Ksh 300 Entry Fee</option>
+                    <option value="500">Ksh 500 Entry Fee</option>
+                    <option value="1000">Ksh 1000 Entry Fee</option>
+                    <option value="Other">Other (Specify)</option>
+                </select>
+
+                <!-- Additional input for "Other" option -->
+                <div id="other-fee-container" style="display: none;">
+                    <label for="other-fee">Specify Entry Fee:</label>
+                    <input type="number" id="other-fee" name="other-fee" placeholder="Enter custom fee in Ksh" min="1">
+                </div>
+
+                <button type="submit">Submit Event</button>
+            </form>
+        </section>
+
+        <!-- Calendar Section -->
+        <section class="calendar-container">
+            <h2>Browse Blood Donation Events on the Calendar</h2>
+            <div id="calendar"></div> <!-- Calendar will be displayed here -->
+        </section>
+
+        <!-- Event Table Section -->
+        <section class="events-section">
+            <h2>Upcoming Donation Events</h2>
+            <table id="events-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event Name</th>
+                        <th>Location</th>
+                        <th>Time</th>
+                        <th>Slots Available</th>
+                        <th>Entry Fee</th>
+                        <th>Details</th> <!-- Added column for event details -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Upcoming events can be added manually here -->
+                    <tr>
+                        <td>2025-02-15</td>
+                        <td>Blood Donation Drive</td>
+                        <td>Nairobi, Pamoja Dokita Center</td>
+                        <td>10:00 AM</td>
+                        <td>50</td>
+                        <td>Free</td>
+                        <td><button>View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        
+        
+
+  <!-- Calendar Navigation -->
+  <div id="calendar-header">
+    <button id="prev-month">&#60;</button>
+    <span id="month-name"></span>
+    <button id="next-month">&#62;</button>
+  </div>
+
+  <!-- Calendar Grid -->
+  <div id="calendar-container"></div>
+
+  <!-- Event Modal -->
+  <div id="event-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p><strong>Date: </strong><span id="modal-date"></span></p>
+      <p><strong>Time: </strong><span id="modal-time"></span></p>
+      <p><strong>Location: </strong><span id="modal-location"></span></p>
+      <p><strong>Description: </strong><span id="modal-description"></span></p>
+      <p><strong>Slots: </strong><span id="modal-slots"></span></p>
+      <p><strong>Fee: </strong><span id="modal-fee"></span></p>
+    </div>
+  </div>
+
+
+        <!-- Trivia Description Section -->
+        <section class="trivia-section">
+            <h2>🎉 Blood Donation Trivia Game 🎉</h2>
+            <p>Welcome to the Blood Donation Trivia Game! Test your knowledge about blood donation myths, facts, and benefits. Answer questions and see how well you know the importance of donating blood! 🚀</p>
+            <p>Click the button below to start the game. Each question will have multiple choices, and you'll get feedback after each answer. Ready to begin?</p>
+
+            <!-- Start Button -->
+            <button id="start-game-btn" class="start-btn">Start Game</button>
+        </section>
+
+        <!-- Trivia Game Popup (Initially Hidden) -->
+        <div id="game-popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h3>🎯 Question <span id="question-number">1</span> of 30</h3>
+                <p id="question-text">Loading question...</p>
+
+                <div id="answers-container">
+                    <!-- Dynamic answers will be inserted here -->
+                </div>
+
+                <div id="progress-bar-container">
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                </div>
+
+                <button id="next-btn" class="next-btn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Final Result Section -->
+        <div id="result-container" class="result-container" style="display: none;">
+            <h2>Your Score: <span id="final-score"></span></h2>
+            <button id="restart-btn" class="restart-btn">Restart Game</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Find us at: <strong>Pamoja Dokita® Blood Donation Center</strong>, Nairobi, Kenya. For inquiries, please contact us at <strong>info@pamoja-dokita.com</strong></p>
+        <p>&copy; 2025 Pamoja Dokita®. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="calendar.js"></script>
+    <script src="game.js"></script>
+    <script src="date.js"></script>
+
+</body>
+</html>

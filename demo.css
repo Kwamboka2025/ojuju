@@ -1,0 +1,215 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 2.5rem;
+  color: #b30000;
+  margin-bottom: 10px;
+}
+
+header p.highlight {
+  font-size: 1rem;
+  color: #b30000;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 2px solid #b30000;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b30000;
+  padding: 0 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  background-color: #f9f9f9;
+}
+
+select {
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Submit Button */
+button {
+  background-color: #b30000;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #990000;
+}
+
+/* Section for Recent/Approved/Onhold Requests */
+section.list-container {
+  margin-top: 30px;
+  display: none;
+}
+
+section.list-container h3 {
+  font-size: 1.5rem;
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #b30000;
+  color: white;
+  font-size: 1.1rem;
+}
+
+td {
+  background-color: #fafafa;
+}
+
+tr:hover td {
+  background-color: #f1f1f1;
+}
+
+button.table-action-btn {
+  background-color: #b30000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.table-action-btn:hover {
+  background-color: #990000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer .back-btn {
+  color: #b30000;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: 2px solid #b30000;
+  border-radius: 5px;
+}
+
+footer .back-btn:hover {
+  background-color: #b30000;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  header h2 {
+    font-size: 2rem;
+  }
+
+  header p.highlight {
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

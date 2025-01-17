@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #e63946; /* Bold red for urgency */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+header nav {
+    margin-top: 0.5em;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #d62828; /* Darker red for hover effect */
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 160px); /* Adjust height for footer */
+}
+
+main h2 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #e63946;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+main p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Donor List */
+.styled-donor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.donor-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #e63946; /* Red border for emphasis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.donor-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donor-number {
+    background: #e63946;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donor-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.donor-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.donor-blood-group {
+    margin-top: 5px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.details-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-btn:hover {
+    background: #d62828; /* Darker red */
+    transform: scale(1.05);
+}
+
+/* Popup */
+#donorPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #e63946;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+#donorPopup.hidden {
+    display: none;
+}
+
+#donorPopup h3 {
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+#donorPopup p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#donorPopup button {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donorPopup button:hover {
+    background: #d62828;
+}
+
+/* Footer */
+footer {
+    background-color: #e63946;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer i {
+    color: #ffd700; /* Gold heart for extra flair */
+}

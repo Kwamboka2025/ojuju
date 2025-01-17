@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Donations</title>
+  <link rel="stylesheet" href="process.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Process Unprocessed Donations</h1>
+
+    <!-- Section to Select Donation -->
+    <div id="processSection">
+      <label for="donorSelect">Select a donation to process:</label>
+      <select id="donorSelect"></select>
+      <button id="processButton">Process Selected Donation</button>
+    </div>
+
+    <!-- Hidden Processing Form -->
+    <div id="processingForm" style="display: none;">
+      <h2>Processing Donation</h2>
+      <form>
+        <!-- Donor Details -->
+  
+
+        <!-- Additional Details -->
+        <div>
+          <label for="donationDate">Donation Date:</label>
+          <input type="date" id="donationDate" required>
+        </div>
+        <div>
+          <label for="donationType">Donation Type:</label>
+          <select id="donationType" required>
+            <option value="">Select Donation Type</option>
+            <option value="Whole Blood">Whole Blood</option>
+            <option value="Platelets">Platelets</option>
+            <option value="Plasma">Plasma</option>
+            <option value="Cryoprecipitate">Cryoprecipitate</option>
+            <option value="Granulocytes">Granulocytes</option>
+          </select>
+        </div>
+
+        <!-- Blood Component Details -->
+        <div>
+          <label for="componentType">Blood Component Type:</label>
+          <select id="componentType" required>
+            <option value="">Select Component Type</option>
+            <option value="Red Blood Cells">Red Blood Cells</option>
+            <option value="Whole Blood">Whole Blood</option>
+            <option value="Platelets">Platelets</option>
+            <option value="Plasma">Plasma</option>
+            <option value="Cryoprecipitate">Cryoprecipitate</option>
+            <option value="Granulocytes">Granulocytes</option>
+          </select>
+        </div>
+        <div>
+          <label for="bloodGroup">Blood Group:</label>
+          <select id="bloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+        </div>
+        <div>
+          <label for="rhFactor">Rh Factor:</label>
+          <select id="rhFactor" required>
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+          </select>
+        </div>
+        <div>
+          <label for="volumeCollected">Volume Collected (mL):</label>
+          <input type="number" id="volumeCollected" required placeholder="e.g., 450">
+        </div>
+        <div>
+          <label for="unitNumber">Unit Number:</label>
+          <input type="text" id="unitNumber" required placeholder="Auto-generated" readonly>
+        </div>
+
+        <button type="button" id="saveProcessingDetails">Save Processing Details</button>
+      </form>
+    </div>
+
+    <!-- Search Bar for Processing Donations -->
+    <div id="searchSection">
+      <label for="searchDonation">Search Donations:</label>
+      <input type="text" id="searchDonation" placeholder="Search by unit number or component type...">
+    </div>
+
+    <!-- Processed Donations List -->
+    <div id="processedList">
+      <h2>Processed Donations</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Unit Number</th>
+              <th>Donation Date</th>
+              <th>Blood Component</th>
+              <th>Blood Group and Rh Factor</th>
+              <th>Volume Collected (mL)</th>
+              <th>Process</th>
+            </tr>
+          </thead>
+          <tbody id="processingTable">
+            <!-- Entries will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  <!-- Confirmed Donations List -->
+  
+  <h3>Confirmed Donations</h3>
+  <div class="table-container">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Unit Number</th>
+          <th>Donation Date</th>
+          <th>Component Type</th>
+          <th>Blood Group (Rh Factor)</th>
+          <th>Volume Collected (mL)</th>
+          <th>Storage Temperature</th>
+          <th>Test Results</th>
+        </tr>
+      </thead>
+      <tbody id="confirmedTable"></tbody>
+    </table>
+  </div>
+    </div>
+  <!-- Modal for Test Results -->
+  <div id="testResultsModal" style="display: none;">
+    <h3>Test Results</h3>
+    <p>Unit Number: <span id="testUnitNumber"></span></p>
+    <p>Component Type: <span id="testComponentType"></span></p>
+    <p>Blood Group: <span id="testBloodGroup"></span></p>
+    <p>Volume Collected: <span id="testVolume"></span></p>
+    
+    <label for="hivTest">HIV Test:</label>
+    <select id="hivTest">
+      <option value="Negative">Negative</option>
+      <option value="Positive">Positive</option>
+    </select>
+    <br />
+    
+    <label for="hbsAgTest">Hepatitis B (HBsAg) Test:</label>
+    <select id="hbsAgTest">
+      <option value="Negative">Negative</option>
+      <option value="Positive">Positive</option>
+    </select>
+    <br />
+    
+    <label for="hcvTest">Hepatitis C (HCV) Test:</label>
+    <select id="hcvTest">
+      <option value="Negative">Negative</option>
+      <option value="Positive">Positive</option>
+    </select>
+    <br />
+    
+    <label for="syphilisTest">Syphilis (TPHA) Test:</label>
+    <select id="syphilisTest">
+      <option value="Negative">Negative</option>
+      <option value="Positive">Positive</option>
+    </select>
+    <br />
+    
+    <label for="otherTests">Other Tests:</label>
+    <input type="text" id="otherTests" placeholder="Enter other test results" />
+    <br />
+    
+    <button id="confirmTestButton" onclick="confirmTestResults()">Confirm Test Results</button>
+    
+   
+  </div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<script src="zote.js" defer></script>
+  <script src="process.js" defer></script>
+  <script src="white.js" defer></script>
+</body>
+</html>

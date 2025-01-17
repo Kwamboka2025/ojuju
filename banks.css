@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: red;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Main Section Styles */
+main {
+  padding: 20px;
+}
+
+/* Blood Cards Container - Grid Layout */
+.blood-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  gap: 20px; /* Space between cards */
+  justify-items: center; /* Center align cards horizontally */
+  align-items: center; /* Center align cards vertically */
+}
+
+/* Individual Blood Card */
+.blood-card {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 100%; /* Full width within grid column */
+  max-width: 180px; /* Resized for smaller appearance */
+  height: 150px; /* Fixed height for consistent layout */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blood-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blood-card .blood-icon {
+  font-size: 2em;
+  color: red;
+}
+
+.blood-card .blood-info {
+  margin-top: 10px;
+}
+
+.blood-card strong {
+  font-size: 1.2em;
+}
+
+/* Popup Styles */
+#details-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+#details-popup.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+#popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+#popup-content h2 {
+  margin-top: 0;
+  color: red;
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: red;
+  cursor: pointer;
+}
+
+#donationTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#donationTable th,
+#donationTable td {
+  border: 1px solid red;
+  padding: 10px;
+  text-align: left;
+}
+
+#donationTable th {
+  background-color: red;
+  color: white;
+}
+
+#donationTable td {
+  background-color: white;
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blood-cards {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .blood-cards {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+  }
+}
+
+
+/* General styling for the cards container */
+#records-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #fff; /* White background for contrast */
+}
+
+/* Styles for each card */
+.record-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdddd; /* Light red for the card background */
+  border: 2px solid #ff0000; /* Red border for boldness */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+/* Hover effect for the cards */
+.record-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.record-icon {
+  font-size: 40px;
+  color: #ff0000; /* Bright red for icons */
+  margin-bottom: 10px;
+}
+
+/* Title styling */
+.record-info strong {
+  font-size: 18px;
+  color: #ff0000; /* Red for the title */
+  margin-bottom: 5px;
+}
+
+/* Count styling */
+.record-info p {
+  font-size: 16px;
+  color: #333; /* Darker text for readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #records-container {
+    gap: 10px;
+  }
+
+  .record-card {
+    width: 150px;
+    height: 150px;
+  }
+}

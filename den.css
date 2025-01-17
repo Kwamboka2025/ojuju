@@ -1,0 +1,64 @@
+/* General table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
+
+/* Modal styles */
+#denyModal {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#denyModal h3 {
+  margin-top: 0;
+}
+
+#denyModal button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+#denyModal button:hover {
+  background-color: #f2f2f2;
+}
+
+/* Overlay styles */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}

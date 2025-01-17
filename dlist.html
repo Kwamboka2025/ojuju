@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pamoja Dokita® Donor List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dlist.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-heartbeat"></i> Pamoja Dokita® Blood Donation System</h1>
+        <nav>
+            <a href="index.html" id="homeButton"><i class="fas fa-home"></i> Home</a>
+            <a href="form.html" id="addDonorButton"><i class="fas fa-user-plus"></i> Register Donor</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Donor List</h2>
+            <p>Meet our lifesaving heroes! Explore the list of registered donors below and take action by viewing their details or connecting with them.</p>
+
+            <!-- Numbered donor list -->
+            <ol id="donorList" class="styled-donor-list">
+                <!-- Placeholder donor entries -->
+                <li>
+                    <div class="donor-card">
+                        <div class="donor-number">1</div>
+                        <div class="donor-info">
+                            <h3 class="donor-name"><i class="fas fa-user"></i> John Doe</h3>
+                            <p class="donor-blood-group"><i class="fas fa-tint"></i> Blood Group: O+</p>
+                        </div>
+                        <button class="details-btn" onclick="viewDetails(1)">
+                            <i class="fas fa-info-circle"></i> View Details
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="donor-card">
+                        <div class="donor-number">2</div>
+                        <div class="donor-info">
+                            <h3 class="donor-name"><i class="fas fa-user"></i> Jane Smith</h3>
+                            <p class="donor-blood-group"><i class="fas fa-tint"></i> Blood Group: A-</p>
+                        </div>
+                        <button class="details-btn" onclick="viewDetails(2)">
+                            <i class="fas fa-info-circle"></i> View Details
+                        </button>
+                    </div>
+                </li>
+                <!-- New donors will be dynamically added here -->
+            </ol>
+        </section>
+    </main>
+<!-- Section for Button with Toggleable Themes -->
+<section id="button-section" style="text-align: center; margin-top: 30px;">
+    <button id="themeButton" onclick="toggleTheme()">Back to Main Page</button>
+</section>
+
+<style>
+    /* Button Styling for the Toggleable Theme */
+    #themeButton {
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #themeButton.white:hover {
+        background-color: #333;
+        color: white;
+    }
+
+    /* TED Theme Styling */
+    #themeButton.red {
+        background-color: #E30613; /* TED red */
+        color: white;
+    }
+
+    #themeButton.red:hover {
+        background-color: #A10200; /* Darker red on hover */
+    }
+
+    /* Distinct Section Styling */
+    #button-section {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        width: 50%; /* Center the button section */
+    }
+</style>
+
+<script>
+    // Toggle the theme between white and red
+    function toggleTheme() {
+        const button = document.getElementById('themeButton');
+        // Change the theme and redirect to main page
+        button.classList.toggle('red');
+        button.classList.toggle('white');
+        window.location.href = 'karibu.html'; // Redirect to main page
+    }
+</script>
+    <!-- Popup for donor details -->
+    <div id="donorPopup" class="hidden">
+        <!-- Dynamic donor details will be injected via JavaScript -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pamoja Dokita® | Powered by Compassion <i class="fas fa-heart"></i></p>
+    </footer>
+
+    <script src="dlist.js"></script>
+</body>
+</html>

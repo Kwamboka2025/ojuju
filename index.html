@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita - Blood Bank System</title>
+  <link rel="stylesheet" href="sop.css"> <!-- Link to external CSS -->
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+      <style>
+        /* Styling the heading */
+        h1 {
+            color: #2c3e50; /* Dark Blue */
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ecf0f1; /* Light Gray */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling the body content */
+        p {
+            color: #34495e; /* Dark Gray */
+            font-family: 'Verdana', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        /* Styling the call to action */
+        .cta {
+            font-family: 'Arial', sans-serif;
+            font-size: 22px;
+            text-align: center;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #e74c3c; /* Red */
+            padding: 15px;
+            margin: 30px auto;
+            width: 50%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #c0392b; /* Darker Red */
+        }
+    </style>
+    
+</head>
+<body>
+  <div class="container">
+    <!-- Introductory Section -->
+    <div class="intro">
+      <h1>Welcome to Pamoja Dokita&reg;</h1>
+
+    <p>
+        Pamoja Dokita Transfusion systems supports quality patient care and drives efficiency by streamlining collaboration among the blood bank, lab, physicians, and nurses.
+    </p>
+    <p>
+        Together, we can ensure smarter and safer blood management through our comprehensive transfusion software platform.
+    </p>
+
+    <p class="cta">Join us today!</p>
+      <div class="action-buttons">
+        <button id="showLogin">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <button id="showSignup">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-container" id="loginFormContainer" style="display: none;">
+      <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+      <form id="loginForm">
+        <label for="loginUserOrEmail">
+          <i class="fas fa-user"></i> Username or Email:
+        </label>
+        <input type="text" id="loginUserOrEmail" name="loginUserOrEmail" placeholder="Enter your username or email" required />
+
+        <label for="loginPassword">
+          <i class="fas fa-lock"></i> Password:
+        </label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required />
+
+        <button type="submit">
+          <i class="fas fa-arrow-right"></i> Login
+        </button>
+      </form>
+      <p>
+        Don't have an account? 
+        <a href="#" id="switchToSignup"><i class="fas fa-user-plus"></i> Sign up here</a>
+      </p>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container" id="signupFormContainer" style="display: none;">
+      <h2><i class="fas fa-user-plus"></i> Create an Account</h2>
+      <form id="signupForm">
+        <label for="signupUsername">
+          <i class="fas fa-user"></i> Username:
+        </label>
+        <input type="text" id="signupUsername" name="signupUsername" placeholder="Choose a username" required />
+
+        <label for="signupEmail">
+          <i class="fas fa-envelope"></i> Email:
+        </label>
+        <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required />
+
+        <label for="signupPassword">
+          <i class="fas fa-lock"></i> Password:
+        </label>
+        <input type="password" id="signupPassword" name="signupPassword" placeholder="Create a password" required />
+
+        <label for="signupConfirmPassword">
+          <i class="fas fa-lock"></i> Confirm Password:
+        </label>
+        <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Confirm your password" required />
+
+        <button type="submit">
+          <i class="fas fa-user-check"></i> Sign Up
+        </button>
+      </form>
+      <p>
+        Already have an account? 
+        <a href="#" id="switchToLogin"><i class="fas fa-sign-in-alt"></i> Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="sop.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>

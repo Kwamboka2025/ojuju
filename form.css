@@ -1,0 +1,201 @@
+/* General Reset and Font Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 i {
+  margin-right: 10px;
+}
+
+/* Main Section Styling */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+h2 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  color: #d32f2f;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Label Styling */
+label {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button Styling */
+button[type="submit"] {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #b71c1c;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+}
+
+/* Icons Styling */
+i {
+  color: #d32f2f;
+  margin-right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  input, select, textarea {
+    font-size: 1em;
+  }
+
+  button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+}
+
+/* Interactive focus for form elements */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #d32f2f;
+  outline: none;
+}
+
+input[type="radio"]:checked + label {
+  color: #d32f2f;
+}
+
+/* Style for the Back to Top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the button horizontally */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden; /* Initially hidden */
+}
+
+/* Hover effect for the button */
+.back-to-top:hover {
+  background-color: #0056b3;
+  transform: translateX(-50%) scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Show button when scrolling down */
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+#progressWrapper {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+#progressBar {
+    height: 25px;
+    background-color: #4caf50;
+    width: 0%;
+}

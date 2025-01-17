@@ -1,0 +1,154 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #cc0000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+/* Main Content Section */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #cc0000;
+  border-bottom: 2px solid #cc0000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+}
+
+table th {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Buttons */
+button {
+  background-color: #cc0000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #a30000;
+}
+
+/* Collapsible Section */
+.collapsible {
+  background-color: #cc0000;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.collapsible:after {
+  content: '\f0da'; /* Font Awesome caret icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  float: right;
+}
+
+.collapsible.active:after {
+  content: '\f0d7'; /* Font Awesome caret-down icon */
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Popup Styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #cc0000;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 80%;
+  max-width: 600px;
+}
+
+.popup-content h2 {
+  color: #cc0000;
+  margin-top: 0;
+}
+
+.popup-content button {
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #cc0000;
+  color: #fff;
+}
+
+/* Back to Main Page Button */
+.back-to-main button {
+  display: block;
+  margin: 20px auto;
+  font-size: 1.2rem;
+}

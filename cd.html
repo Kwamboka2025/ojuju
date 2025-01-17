@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita&reg; Blood Bank Inventory System - Donation Table</title>
+  <link rel="stylesheet" href="cd.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>Pamoja Dokita&reg; Blood Bank Inventory System</h1>
+    <p>Manage and monitor blood inventory effectively.</p>
+  </header>
+
+  <main class="container">
+    <!-- Control Section -->
+    <div class="controls">
+      <div class="filter-section">
+        <label for="filterBloodGroup">Filter by Blood Group:</label>
+        <select id="filterBloodGroup">
+          <option value="">All Blood Groups</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+
+        <label for="filterComponentType">Filter by Component Type:</label>
+        <select id="filterComponentType">
+          <option value="">All Components</option>
+          <option value="Red Blood Cells">Red Blood Cells</option>
+          <option value="Whole Blood">Whole Blood</option>
+          <option value="Platelets">Platelets</option>
+          <option value="Plasma">Plasma</option>
+          <option value="Cryoprecipitate">Cryoprecipitate</option>
+          <option value="Granulocytes">Granulocytes</option>
+        </select>
+
+        <button id="filterButton">Apply Filters</button>
+      </div>
+
+      <div class="action-section">
+        <button id="printButton">Print Filtered List</button>
+      </div>
+    </div>
+
+    <!-- Blood Donation Table -->
+    <section class="table-container">
+      <table id="donationTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Unit Number</th>
+            <th>Donation Date</th>
+            <th>Component Type</th>
+            <th>Blood Group (Rh Factor)</th>
+            <th>Volume Collected (mL)</th>
+            <th>Expiry Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="7">No data available. Please add donations.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pamoja Dokita&reg;. All Rights Reserved.</p>
+  </footer>
+
+  <script src="cd.js"></script>
+  <script src="reports.js"></script> <!-- JavaScript for filters and print -->
+</body>
+</html>

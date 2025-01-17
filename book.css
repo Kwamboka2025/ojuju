@@ -1,0 +1,286 @@
+/* book.css */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background-color: #e60000; /* Red */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Section Styling */
+section {
+  padding: 40px 20px;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #e60000;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #e60000;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #e60000;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.approve {
+  background-color: #4caf50;
+}
+
+button.approve:hover {
+  background-color: #45a049;
+}
+
+button.reject {
+  background-color: #f44336;
+}
+
+button.reject:hover {
+  background-color: #e53935;
+}
+
+/* Form Styling */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="number"], select {
+  width: 50%;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #e60000;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Product Cards */
+.product-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card h3 {
+  color: #e60000;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: #e60000;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.product-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 48%; /* Make product cards take up less space */
+  }
+
+  input[type="number"], select {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2rem; /* Smaller header text */
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  table th, table td {
+    font-size: 0.9rem; /* Smaller table text */
+  }
+
+  button {
+    font-size: 0.9rem; /* Smaller button text */
+  }
+
+  .product-card {
+    width: 100%; /* Stack product cards on smaller screens */
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem; /* Further reduce header text */
+  }
+
+  header p {
+    font-size: 1rem; /* Reduce paragraph text */
+  }
+
+  form {
+    padding: 15px; /* Less padding in form */
+  }
+
+  input[type="number"], select, button[type="submit"] {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .product-card {
+    width: 100%; /* Full-width product cards */
+    margin-bottom: 15px;
+  }
+
+  table th, table td {
+    font-size: 0.85rem; /* Smaller table text */
+  }
+
+  button {
+    font-size: 1rem; /* Adjust button size */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Further reduce header text */
+  }
+
+  form input, form select, form textarea {
+    font-size: 0.9rem; /* Adjust form input text size */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Smaller footer text */
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100%; /* Ensure product cards are stacked */
+    margin: 5px 0;
+  }
+
+  button {
+    font-size: 0.9rem; /* Adjust button size */
+    padding: 10px 18px; /* Smaller button padding */
+  }
+
+  table {
+    font-size: 0.85rem; /* Smaller table text */
+  }
+}

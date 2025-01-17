@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita® 2025 - Available for Pickup</title>
+  <link rel="stylesheet" href="rep.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fa-solid fa-droplet"></i> Pamoja Dokita® Blood Bank Inventory</h1>
+<h2><i class="fa-solid fa-check-circle"></i> Clear Donations from Bank</h2>
+    </header>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation">
+      <a href="karibu.html" class="nav-button"><i class="fa-solid fa-house"></i> Back to Main Page</a>
+      <a href="mal.html" class="nav-button"><i class="fa-solid fa-file-alt"></i> Summaries</a>
+    </div>
+
+    <!-- Released Donations Section -->
+    <section id="released-section">
+      <button class="collapsible">
+        <i class="fa-solid fa-caret-right"></i> Approved Requests
+      </button>
+      <div class="content">
+        <table id="releasedTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th><i class="fa-solid fa-barcode"></i> Unit Number</th>
+              <th><i class="fa-solid fa-calendar-days"></i> Donation Date</th>
+              <th><i class="fa-solid fa-vial"></i> Component Type</th>
+              <th><i class="fa-solid fa-user-tag"></i> Blood Group</th>
+              <th><i class="fa-solid fa-user"></i> Recipient Name</th>
+              <th><i class="fa-solid fa-calendar-check"></i> Transaction Date</th>
+              <th><i class="fa-solid fa-gears"></i> Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8"><i class="fa-solid fa-spinner fa-spin"></i> Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <button id="prevPage" disabled><i class="fa-solid fa-angle-left"></i> Previous</button>
+          <span id="pageInfo">Page 1 of 1</span>
+          <button id="nextPage">Next <i class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available for Pickup Section -->
+    <section id="available-section">
+      <h2><i class="fa-solid fa-box-open"></i> Completed Requests</h2>
+      <table id="clearedTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th><i class="fa-solid fa-barcode"></i> Unit Number</th>
+            <th><i class="fa-solid fa-calendar-days"></i> Donation Date</th>
+            <th><i class="fa-solid fa-vial"></i> Component Type</th>
+            <th><i class="fa-solid fa-user-tag"></i> Blood Group</th>
+            <th><i class="fa-solid fa-user"></i> Recipient Name</th>
+            <th><i class="fa-solid fa-calendar-check"></i> Transaction Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="7"><i class="fa-solid fa-circle-info"></i> No cleared donations yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+
+  </div>
+
+  <!-- Script Links -->
+  <script src="rep.js" defer></script>
+    <script src="repiss.js" defer></script>
+  <script>
+    // Collapsible functionality for Released Donations
+    document.querySelectorAll('.collapsible').forEach(button => {
+      button.addEventListener('click', function () {
+        const icon = this.querySelector('.fa-solid');
+        const content = this.nextElementSibling;
+
+        // Toggle content visibility
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+
+        // Update icon
+        icon.classList.toggle('fa-caret-right');
+        icon.classList.toggle('fa-caret-down');
+      });
+    });
+  </script>
+
+</body>
+</html>

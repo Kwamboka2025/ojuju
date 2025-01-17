@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita® 2025 - Recent Requests</title>
+  <link rel="stylesheet" href="huh.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Pamoja Dokita® 2025</h1>
+    <p>Blood Bank Management System - Recent Requests</p>
+  </header>
+
+  <main>
+    <!-- "Make a Request" Button -->
+    <section class="action-section">
+      <button id="makeRequestBtn" class="make-request-btn">
+        <i class="fas fa-plus"></i> Make a Request
+      </button>
+    </section>
+
+    <!-- Recent Requests Table -->
+    <section class="requests-section">
+      <h2>Recent Requests</h2>
+      <table id="recentRequests" class="requests-table">
+        <thead>
+          <tr>
+            <th>Recipient Name</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="requestList">
+          <!-- Rows will be dynamically populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Denied Requests Table -->
+    <section class="denied-section">
+      <h2>Denied Requests</h2>
+      <table id="deniedRequests" class="requests-table">
+        <thead>
+          <tr>
+            <th>Recipient Name</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Reasons for Denial</th>
+          </tr>
+        </thead>
+        <tbody id="deniedList">
+          <!-- Rows for denied requests will be dynamically populated -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pamoja Dokita. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for the Make a Request Button -->
+  <script>
+    document.getElementById('makeRequestBtn').addEventListener('click', () => {
+      window.location.href = 'test.html'; // Redirect to the Make a Request page
+    });
+  </script>
+  
+  <script src="req.js" defer
+</body>
+</html>

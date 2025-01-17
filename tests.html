@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Requests Approval Page</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="tes.css">
+  
+  <!-- Link to FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Confirmed Blood Donations <i class="fas fa-tint"></i></h1>
+    <p>Pamoja Dokita&reg 2025 - Blood Inventory Management System</p>
+  </header>
+
+  <section>
+    <!-- Table for confirmed donations -->
+    <h2>Confirmed Donations <i class="fas fa-check-square"></i></h2>
+    <div class="table-container">
+      <table id="confirmedTable">
+        <thead>
+          <tr>
+            <th> <i class="fas fa-list-ol"></i></th>
+            <th>Unit Number <i class="fas fa-hashtag"></i></th>
+            <th>Donation Date <i class="fas fa-calendar-alt"></i></th>
+            <th>Component Type <i class="fas fa-cogs"></i></th>
+            <th>Blood Group <i class="fas fa-heart"></i></th>
+            <th>Test Results <i class="fas fa-vials"></i></th>
+            <th>Actions <i class="fas fa-tasks"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Table for recent blood requests -->
+    <h2>Recent Blood Requests <i class="fas fa-users"></i></h2>
+    <div class="table-container">
+      <table id="requestList">
+        <thead>
+          <tr>
+            <th>Recipient Name <i class="fas fa-user"></i></th>
+            <th>Blood Type <i class="fas fa-blood-type"></i></th>
+            <th>Units <i class="fas fa-flask"></i></th>
+            <th>Actions <i class="fas fa-tasks"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Table for released units -->
+    <h3>Approved Requests <i class="fas fa-warehouse"></i></h3>
+    <div class="table-container">
+      <table id="releasedTable">
+        <thead>
+          <tr>
+            <th> <i class="fas fa-list-ol"></i></th>
+            <th>Unit Number <i class="fas fa-hashtag"></i></th>
+            <th>Donation Date <i class="fas fa-calendar-alt"></i></th>
+            <th>Component Type <i class="fas fa-cogs"></i></th>
+            <th>Blood Group <i class="fas fa-heart"></i></th>
+            <th>Recipient Name <i class="fas fa-user"></i></th>
+            <th>Transaction Date <i class="fas fa-calendar-check"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- External JavaScript files -->
+  <script src="tes.js" defer></script>
+  <script src="tess.js" defer></script>
+  <script src="tess2.js" defer></script>
+
+</body>
+</html>

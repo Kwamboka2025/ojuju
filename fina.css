@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9; /* Soft background for the whole page */
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #b30000; /* Deep red for header */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#summaryContent {
+  background-color: #ffffff; /* White background for summary content */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#summaryContent h3 {
+  color: #b30000; /* Red for headings */
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+
+#bloodSummaryTable {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#bloodSummaryTable th, #bloodSummaryTable td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 1.1em;
+}
+
+#bloodSummaryTable th {
+  background-color: #f5f5f5; /* Subtle grey for header cells */
+  color: #b30000; /* Red text for headers */
+}
+
+#bloodSummaryTable tr.blood-type-A {
+  background-color: #ffe6e6; /* Soft red */
+}
+
+#bloodSummaryTable tr.blood-type-B {
+  background-color: #ffcccc; /* Lighter red */
+}
+
+#bloodSummaryTable tr.blood-type-AB {
+  background-color: #ffffff; /* White */
+}
+
+#bloodSummaryTable tr.blood-type-O {
+  background-color: #ffcccc; /* Light red */
+}
+
+/* Price Type Section */
+.price-type-section {
+  margin-top: 30px;
+  background-color: #fff0f0; /* Light red background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Print Section */
+.print-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.print-button {
+  padding: 12px 25px;
+  background-color: #b30000; /* Red color for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+  background-color: #990000; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  #summaryContent {
+    padding: 20px;
+  }
+
+  #bloodSummaryTable th, #bloodSummaryTable td {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .print-button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}

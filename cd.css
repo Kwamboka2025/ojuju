@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: #d32f2f;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter-section, .action-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+select, input[type="text"], button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+select:hover, input[type="text"]:hover, button:hover {
+  background-color: #d32f2f;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+button:active {
+  background: #b71c1c;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Scrollable Table Container */
+.table-container {
+  max-height: 400px; /* Fixed height for the table's scroll area */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Ensures horizontal scroll for large tables */
+}
+
+table thead {
+  background: #d32f2f;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+table thead th {
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #d32f2f;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* Buttons */
+.backButton {
+  text-decoration: none;
+  background: #fff;
+  color: #d32f2f;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d32f2f;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.backButton:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .filter-section, .action-section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    min-width: 100%;
+  }
+
+  table {
+    min-width: 100%;
+  }
+
+  table thead {
+    font-size: 0.9rem;
+  }
+
+  table tbody td {
+    font-size: 0.9rem;
+  }
+}

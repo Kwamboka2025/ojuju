@@ -1,0 +1,235 @@
+/* Reset */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #c0392b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #e74c3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .menu-left ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.navbar .menu-left ul li {
+  position: relative;
+}
+
+.navbar .menu-left ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu-left ul li a.active,
+.navbar .menu-left ul li a:hover {
+  background-color: #c0392b;
+}
+
+.navbar .menu-right #user-profile-btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .menu-right #user-profile-btn:hover {
+  background-color: #a93226;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #e74c3c;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #c0392b;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Main Content */
+.container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Styling */
+.container > section {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container > section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #c0392b;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* Blood Products */
+.blood-products-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blood-product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blood-product-card i {
+  font-size: 2rem;
+  color: #e74c3c;
+}
+
+.blood-product-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+  background-color: #c0392b;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar .menu-left ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .menu-right {
+    margin-top: 10px;
+  }
+
+  .blood-products-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blood-product-card {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+}=

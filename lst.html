@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleared Requests Summary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    #summary {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #printSummary {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #printSummary:hover {
+      background-color: #218838;
+    }
+
+    .fa-filter {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cleared Requests Summary</h1>
+  <form id="filterForm">
+    <label>
+      <i class="fa fa-filter"></i>
+      <select id="bloodTypeFilter">
+        <option value="">Filter by Blood Type</option>
+      </select>
+    </label>
+    <label>
+      <i class="fa fa-calendar-alt"></i>
+      <select id="dateRange">
+        <option value="">All Time</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </label>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Recipient Name</th>
+        <th>Blood Type</th>
+        <th>Units</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="clearedRequestsList">
+      <!-- Cleared requests will be dynamically loaded here -->
+    </tbody>
+  </table>
+
+  <div id="summary">
+    <h3>Summary</h3>
+    <p>Select a filter to view summaries here.</p>
+  </div>
+
+  <button id="printSummary">
+    <i class="fa fa-print"></i> Print Summary
+  </button>
+
+  <script src="lst.js"></script>
+</body>
+</html>

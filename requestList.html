@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="test.css">
+  <title>Blood Donation Request List</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fa fa-list"></i> Blood Donation Request List</h1>
+      <p class="highlight"><i class="fa fa-info-circle"></i> Below is the list of all blood donation requests. Use the action buttons to manage requests.</p>
+    </header>
+
+    <section>
+      <table id="requestList">
+        <thead>
+          <tr>
+            <th><i class="fa fa-user"></i> Recipient</th>
+            <th><i class="fa fa-tint"></i> Blood Type</th>
+            <th><i class="fa fa-medkit"></i> Units</th>
+            <th><i class="fa fa-clock-o"></i> Urgency</th>
+            <th><i class="fa fa-cogs"></i> Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <p id="noRequestsMessage" class="hidden"><i class="fa fa-exclamation-circle"></i> No requests found.</p>
+    </section>
+
+    <footer>
+      <a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Back to Form</a>
+    </footer>
+  </div>
+
+  <!-- Modal for viewing details -->
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-content">
+      <h3><i class="fa fa-eye"></i> Request Details</h3>
+      <p><strong>Recipient Name:</strong> <span id="viewRecipientName">N/A</span></p>
+      <p><strong>Blood Type:</strong> <span id="viewBloodType">N/A</span></p>
+      <p><strong>Units Required:</strong> <span id="viewUnits">N/A</span></p>
+      <p><strong>Urgency:</strong> <span id="viewUrgency">N/A</span></p>
+      <p><strong>Denial Reason:</strong> <span id="viewReason">N/A</span></p>
+      <div class="modal-actions">
+        <button id="closeViewModal" class="btn close"><i class="fa fa-times"></i> Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for denying a request -->
+  <div id="denyModal" class="modal hidden">
+    <div class="modal-content">
+      <h3><i class="fa fa-ban"></i> Deny Request</h3>
+      <p><i class="fa fa-question-circle"></i> Please provide one or more reasons for denying this request:</p>
+      <select id="denyReason" multiple>
+        <option value="Blood Type Incompatibility">Blood Type Incompatibility</option>
+        <option value="Insufficient Blood Supply">Insufficient Blood Supply</option>
+        <option value="Inadequate Testing or Documentation">Inadequate Testing or Documentation</option>
+        <option value="Risk of Transfusion Reactions">Risk of Transfusion Reactions</option>
+        <option value="Infection Concerns">Infection Concerns</option>
+        <option value="Medical Contraindications">Medical Contraindications</option>
+        <option value="Alternative Treatments">Alternative Treatments</option>
+        <option value="Ethical or Religious Reasons">Ethical or Religious Reasons</option>
+        <option value="Insurance or Financial Issues">Insurance or Financial Issues</option>
+      </select>
+      <p class="instructions"><i class="fa fa-info-circle"></i> Hold <b>Ctrl</b> (Windows) or <b>Command</b> (Mac) to select multiple reasons.</p>
+      <div class="modal-actions">
+        <button id="confirmDeny" class="btn confirm"><i class="fa fa-check"></i> Confirm</button>
+        <button id="cancelDeny" class="btn cancel"><i class="fa fa-times"></i> Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="loadRequests.js" defer></script>
+</body>
+</html>

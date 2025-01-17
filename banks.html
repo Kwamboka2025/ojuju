@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Availability</title>
+  <link rel="stylesheet" href="banks.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Blood Availability</h1>
+  </header>
+
+  <main>
+    <section id="blood-cards" class="blood-cards">
+      <!-- Blood group cards will be dynamically generated here -->
+    </section>
+    
+    <div id="details-popup" class="hidden">
+      <div id="popup-content">
+        <button id="close-popup" class="close-popup">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Details for Blood Group <span id="blood-group-title"></span></h2>
+        <table id="donationTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Unit Number</th>
+              <th>Donation Date</th>
+              <th>Component Type</th>
+              <th>Blood Group</th>
+              <th>Volume</th>
+              <th>Expiry Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Records will be dynamically generated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section id="requested-donations">
+      <h2>Approved Requests</h2>
+      <table id="requestedDonationsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Unit Number</th>
+            <th>Blood Group</th>
+            <th>Component Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Requested donations will be shown here -->
+        </tbody>
+      </table>
+    </section>
+    
+ <h3>Conpleted Donations</h3>
+<table id="pickedUpDonationsTable" border="1">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Unit Number</th>
+      <th>Blood Group</th>
+      <th>Component Type</th>
+      <th>Pickup Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="5">No picked-up donations yet.</td></tr>
+  </tbody>
+</table>
+
+
+<div id="records-container">
+  <!-- Cards will be dynamically inserted here -->
+</div>
+
+    
+    <div id="total-count"></div>
+  </main>
+
+<div id="records-container" class="records-container"></div>
+
+  <script src="count.js" defer></script>
+  <script src="banks.js" defer></script>
+    <script src="clear.js" defer></script>
+</body>
+</html>

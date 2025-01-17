@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamoja Dokita® Blood Donations Requests</title>
+  <link rel="stylesheet" href="sim.css"> <!-- Link your styles -->
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Pamoja Dokita® Blood Donation Requests</h1>
+    </header>
+<!-- Section for Button with Toggleable Themes -->
+<section id="button-section" style="text-align: center; margin-top: 30px;">
+    <button id="themeButton" onclick="toggleTheme()">Back to Main Page</button>
+</section>
+
+<style>
+    /* Button Styling for the Toggleable Theme */
+    #themeButton {
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #themeButton.white:hover {
+        background-color: #333;
+        color: white;
+    }
+
+    /* TED Theme Styling */
+    #themeButton.red {
+        background-color: #E30613; /* TED red */
+        color: white;
+    }
+
+    #themeButton.red:hover {
+        background-color: #A10200; /* Darker red on hover */
+    }
+
+    /* Distinct Section Styling */
+    #button-section {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        width: 50%; /* Center the button section */
+    }
+</style>
+
+<script>
+    // Toggle the theme between white and red
+    function toggleTheme() {
+        const button = document.getElementById('themeButton');
+        // Change the theme and redirect to main page
+        button.classList.toggle('red');
+        button.classList.toggle('white');
+        window.location.href = 'karibu.html'; // Redirect to main page
+    }
+</script>
+    <!-- Request Count Section (Card Style) -->
+    <div class="request-counts">
+      <div class="request-card">
+        <i class="fas fa-clock"></i>
+        <h3>Pending Requests</h3>
+        <p id="recentCount">0</p>
+      </div>
+      <div class="request-card">
+        <i class="fas fa-check"></i>
+        <h3>Approved Requests</h3>
+        <p id="approvedCount">0</p>
+      </div>
+    </div>
+
+    <!-- Recent Requests Section -->
+    <section class="list-container" id="recent-requests">
+      <h2>Recent Requests</h2>
+      <table id="recentRequestsList">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('recent-requests')">Toggle Recent Requests</button>
+    </section>
+
+    <!-- Approved Requests Section -->
+    <section class="list-container" id="approved-requests">
+      <h2>Approved Requests</h2>
+      <table id="approvedRequestsList">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Price Type</th>
+            <th>Anticipated Date of Transfusion</th>
+            <th>Approved Date</th> <!-- New Column for Approved Date -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Approved requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('approved-requests')">Toggle Approved Requests</button>
+    </section>
+
+    <!-- On Hold Requests Section -->
+    <section class="list-container" id="onhold-requests">
+      <h2>On Hold Requests</h2>
+      <table id="onholdRequestsList">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Recipient</th>
+            <th>Blood Type</th>
+            <th>Units Needed</th>
+            <th>Price Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- On Hold requests will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <button class="toggle-btn" onclick="toggleVisibility('onhold-requests')">Toggle On Hold Requests</button>
+    </section>
+    
+    
+    
+    
+    
+    <!-- Section for Button with Toggleable Themes -->
+<section id="button-section" style="text-align: center; margin-top: 30px;">
+    <button id="themeButton" onclick="toggleTheme()">Back to Main Page</button>
+</section>
+
+<style>
+    /* Button Styling for the Toggleable Theme */
+    #themeButton {
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #themeButton.white:hover {
+        background-color: #333;
+        color: white;
+    }
+
+    /* TED Theme Styling */
+    #themeButton.red {
+        background-color: #E30613; /* TED red */
+        color: white;
+    }
+
+    #themeButton.red:hover {
+        background-color: #A10200; /* Darker red on hover */
+    }
+
+    /* Distinct Section Styling */
+    #button-section {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        width: 50%; /* Center the button section */
+    }
+</style>
+
+<script>
+    // Toggle the theme between white and red
+    function toggleTheme() {
+        const button = document.getElementById('themeButton');
+        // Change the theme and redirect to main page
+        button.classList.toggle('red');
+        button.classList.toggle('white');
+        window.location.href = 'karibu.html'; // Redirect to main page
+    }
+</script>
+    
+    
+    
+    
+    
+  </div>
+
+  <script src="confirm6.js" defer></script>
+  <script src="sim.js" defer></script>
+  <script src="appr.js" defer></script>
+  <script>
+    // Function to toggle visibility of sections
+    function toggleVisibility(section) {
+      const sectionElement = document.getElementById(section);
+      sectionElement.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>
